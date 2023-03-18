@@ -1,2 +1,70 @@
-# html
-# html utility apps 
+# htmlOPS
+HTML operations for the discerning coder
+
+
+# Hash
+CRC-16
+CRC-32
+MD2
+MD4
+MD5
+SHA1
+SHA224
+SHA256
+SHA384
+SHA512
+SHA512/224
+SHA512/256
+SHA3-224
+SHA3-256
+SHA3-384
+SHA3-512
+Keccak-224
+Keccak-256
+Keccak-384
+Keccak-512
+Shake-128
+Shake-256
+
+
+
+
+# File Hash
+CRC-16
+CRC-32
+MD2
+MD4
+MD5
+SHA1
+SHA224
+SHA256
+SHA384
+SHA512
+SHA512/224
+SHA512/256
+SHA3-224
+SHA3-256
+SHA3-384
+SHA3-512
+Keccak-224
+Keccak-256
+Keccak-384
+Keccak-512
+Shake-128
+Shake-256
+
+
+# Encode
+Base32
+Base32 File
+Base64
+Base64 File
+HTML
+URL
+# Decode
+Base32
+Base32 File
+Base64
+Base64 File
+HTML
+URL
