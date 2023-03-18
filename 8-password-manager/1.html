@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate 32-byte Key</title>
+</head>
+<body>
+
+	<h1>Generate 32-byte Key</h1>
+
+
+<p>Number of possible keys = 2^256 = 115792089237316195423570985008687907853269984665640564039457584007913129639936
+<br>
+
+
+Each key generated using this method is unique, as long as the input (i.e., the password and number) is different. Even a small change in the input will result in a completely different key, due to the avalanche effect of cryptographic hash functions.
+
+In other words, it's highly unlikely that two different inputs would produce the same key using this method. However, it's not impossible, as there is a very small probability that two different inputs could result in the same hash value (known as a hash collision).
+
+But in practice, the probability of such a collision occurring is negligible, given the large key space and the high collision resistance of the SHA256 hash function. So for all practical purposes, we can assume that each key generated using this method is unique.
+
+
+
+<br><br><br>
+
+	<label for="password">Password:[1-512 characters]</label>
+	<input type="password" id="password" maxlength="512"><br><br>
+
+	<label for="number">Number: [1-999999999] </label>
+	<input type="number" id="number" min="1" max="999999999"><br><br>
+
+	<button onclick="generateKey()">Generate Key</button>
+
+	<p id="key"></p>
+
+	<script>
+		function generateKey() {
+			var password = document.getElementById("password").value;
+			var number = document.getElementById("number").value;
+
+			// Check if password is within 1-512 characters
+			if (password.length < 1 || password.length > 512) {
+				alert("Password must be between 1-512 characters");
+				return;
+			}
+
+			// Check if number is within 1-999999999
+			if (number < 1 || number > 999999999) {
+				alert("Number must be between 1-999999999");
+				return;
+			}
+
+			// Concatenate password and number
+			var concatenated = password + number;
+
+			// Use SHA256 to generate a 32-byte key
+			var hash = CryptoJS.SHA256(concatenated);
+			var key = hash.toString(CryptoJS.enc.Hex).substr(0, 64);
+
+			// Display the key on the page
+			document.getElementById("key").innerHTML = "Your 32-byte key is: " + key;
+		}
+	</script>
+
+	<script src="crypto-js.min.js"></script>
+
+</body>
+</html>

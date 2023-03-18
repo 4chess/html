@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <h1>Password Generator</h1>
+    <p>Enter a number between 1 and 99999999999999999999:</p>
+    <input type="number" id="inputNumber" min="1" max="99999999999999999999">
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="passwordOutput"></p>
+    <script>
+      // Define a function to generate a 256-bit password from a number
+      function generatePasswordFromNumber(num) {
+        // Convert the number to a string
+        let numString = num.toString();
+        // Hash the string using SHA-256
+        let hash = CryptoJS.SHA256(numString);
+        // Convert the hash to a hexadecimal string and take the first 32 characters
+        let password = hash.toString(CryptoJS.enc.Hex).slice(0, 32);
+        // Return the password
+        return password;
+      }
+
+      // Define a function to generate a password for the current input number
+      function generatePassword() {
+        // Get the input number from the input field
+        let inputNumber = document.getElementById("inputNumber").value;
+        // Generate a password from the input number
+        let password = generatePasswordFromNumber(inputNumber);
+        // Output the password to the output element
+        let passwordOutput = document.getElementById("passwordOutput");
+        passwordOutput.innerHTML = "Your password is: " + password;
+      }
+    </script>
+    <!-- Include the CryptoJS library for hashing -->
+    <script src="crypto-js.min.js"></script>
+  </body>
+</html>

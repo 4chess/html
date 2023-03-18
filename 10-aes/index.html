@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encryption and Decryption</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="./crypto-js.min.js"></script>
+<style>
+  body {
+    background-color: #19a974;
+  }
+</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<textarea id="input-text" name="input-text" placeholder="Enter your text here"></textarea>
+			
+			<input type="password" id="password" name="password" required minlength="8" maxlength="32" placeholder="Password goes here!">
+			<div class="button-container">
+				<button type="button" id="encrypt-button">Encrypt</button>
+				<button type="button" id="decrypt-button">Decrypt</button>
+			</div>
+			<textarea id="output-text" name="output-text" placeholder="Your encrypted or decrypted text will appear here"></textarea>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

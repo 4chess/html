@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+</head>
+<body>
+  <h1>Password Generator</h1>
+  <form>
+    <label for="number-input">Enter a number from 1 to 115792089237316195423570985008687907853269984665640564039457584007913129639935:</label>
+    <input type="number" id="number-input" min="1" max="115792089237316195423570985008687907853269984665640564039457584007913129639935" required>
+    <br><br>
+    <button type="button" id="generate-button">Generate Password</button>
+  </form>
+  <br>
+  <div id="result"></div>
+  <script>
+    document.getElementById('generate-button').addEventListener('click', function() {
+      var input = document.getElementById('number-input').value;
+      var inputNum = BigInt(input);
+      if (inputNum < BigInt(1) || inputNum > BigInt('115792089237316195423570985008687907853269984665640564039457584007913129639935')) {
+        alert('Please enter a valid number within the specified range.');
+        return;
+      }
+      var data = new TextEncoder().encode(inputNum.toString());
+      crypto.subtle.digest('SHA-256', data).then(function(hash) {
+        var password = Array.from(new Uint8Array(hash.slice(0, 16))).map(function(byte) {
+          return ('0' + byte.toString(16)).slice(-2);
+        }).join('');
+        document.getElementById('result').textContent = 'Password for ' + inputNum + ' is ' + password;
+      });
+    });
+  </script>
+</body>
+</html>

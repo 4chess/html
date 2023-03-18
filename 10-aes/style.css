@@ -1,0 +1,63 @@
+.container {
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+label {
+	margin-top: 10px;
+}
+
+textarea, input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      background-color: #5e2ca5;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#encrypt-button, #decrypt-button {
+	padding: 10px 20px;
+	margin: 0 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#encrypt-button:hover, #decrypt-button:hover {
+	background-color: #3e8e41;
+}
+
+#output-text, #input-text {
+  height: 200px;
+  background-color: #5e2ca5;
+}
+#encrypt-button, #decrypt-button {
+	width: 80px;
+}
+
+#encrypt-button {
+	margin-right: 10px;
+}

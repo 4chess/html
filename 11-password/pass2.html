@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <h1>Password Generator</h1>
+    <label for="numberInput"
+      >Enter a number from 1 to
+      115792089237316195423570985008687907853269984665640564039457584007913129639935:</label
+    >
+    <input type="number" id="numberInput" />
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="password"></p>
+    <script src="crypto-js.min.js"></script>
+    <script>
+      function generatePassword() {
+        const inputNum = document.getElementById("numberInput").value;
+        if (inputNum < 1 || inputNum > 115792089237316195423570985008687907853269984665640564039457584007913129639935) {
+          alert("Please enter a valid number from 1 to 115792089237316195423570985008687907853269984665640564039457584007913129639935.");
+          return;
+        }
+        const hash = CryptoJS.SHA256(inputNum.toString());
+        const password = hash.toString().slice(0, 16);
+        document.getElementById("password").innerText = `Password for ${inputNum}: ${password}`;
+      }
+    </script>
+
+
+
+  <br>
+<br>
+Notice this one has a didfferent seed so the input of 1 for example results in a differnet password.
+  </body>
+</html>
