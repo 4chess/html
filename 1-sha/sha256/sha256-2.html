@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Generate SHA-256 Hash of Password</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  </head>
+  <body>
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password" name="password">
+    <button onclick="generateHash()">Generate Hash</button>
+    <br>
+    <br>
+    <div id="output"></div>
+    
+    <script>
+      function generateHash() {
+        const password = document.getElementById("password").value;
+
+        if (!password) {
+          console.error("No password entered");
+          return;
+        }
+        
+        // Generate a SHA-256 hash of the password
+        const sha256Hash = CryptoJS.SHA256(password);
+        
+        if (!sha256Hash) {
+          console.error("Failed to generate hash");
+          return;
+        }
+
+        // Convert the hash to a hexadecimal string
+        const passwordHash = sha256Hash.toString(CryptoJS.enc.Hex);
+
+        // Make a fetch request with the password hash as the payload
+        fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            passwordHash: passwordHash
+          })
+        })
+        .then(response => {
+          // Handle the response from the server
+          console.log(response);
+        })
+        .catch(error => {
+          // Handle any errors that occur during the fetch request
+          console.error(error);
+        });
+        
+        // Display the password hash on the page
+        console.log("SHA-256 Hash: " + passwordHash);
+        document.getElementById("output").innerHTML = "SHA-256 Hash: " + passwordHash;
+      }
+    </script>
+  </body>
+</html>
