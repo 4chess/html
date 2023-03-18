@@ -1,0 +1,1202 @@
+
+div.post div.body {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+
+
+.topBoards a, #divLatestImages img, #divLatestPosts .latestPostCell,
+  .innerPost, .sideCatalogCell, .markedPost, .sideCatalogMarkedCell,
+  .catalogCell {
+  background: #282A2E;
+  border-radius: 5px;
+}
+
+.theme_clear .topBoards a, .theme_clear #divLatestImages img,
+  .theme_clear #divLatestPosts .latestPostCell, .theme_clear .innerPost,
+  .theme_clear .sideCatalogCell, .theme_clear .markedPost, .theme_clear .sideCatalogMarkedCell,
+  .theme_clear .catalogCell {
+  background-color: #dddddd
+}
+
+.floatingMenu, #quick-reply table {
+  background: #1d1f21;
+}
+
+.theme_clear .floatingMenu, .theme_clear #quick-reply table {
+  background: #cccccc;
+}
+
+.markedPost, .sideCatalogMarkedCell {
+  background: rgba(59, 22, 43, 0.4);
+}
+
+.theme_clear .markedPost, .theme_clear .sideCatalogMarkedCell {
+  background: #868686;
+}
+
+#divLatestPosts .latestPostCell, .innerPost, .sideCatalogCell,
+  .markedPost, .sideCatalogMarkedCell, .catalogCell {
+  border: 1px solid #117743;
+}
+
+#newPostFieldset, #quick-reply table, .modalDecorationPanel,
+  .floatingMenu, #settingsFieldset, .reportFieldset {
+  border: 1px dashed #117743;
+}
+
+.logoImg {
+  height: 250px;
+  min-width: 1px;
+}
+
+.captchaImage {
+  width: 300px;
+  height: 100px;
+  background-color: white;
+}
+
+.small {
+  font-size: 75%;
+  text-decoration: none;
+}
+
+.clearer {
+  clear: both;
+}
+
+.small a {
+  text-decoration: none;
+}
+
+#panelReferences a {
+  display: block;
+}
+
+.imgLink img, .latestImageCell img, .mediaCell img, .catalogCell img {
+  image-orientation: from-image;
+}
+
+.linkList a {
+  display: block;
+}
+
+#themeSelector {
+  font-size: 100%;
+}
+
+h3, p, label {
+  margin: 0.25em 0;
+}
+
+hr {
+  height: 0px;
+  border-width: 1px medium medium;
+  border-style: solid none none;
+  border-color: #117743;
+}
+
+a, .coloredIcon, .unhideButton, .embedButton, .checkedFavouriteButton:before,
+  #selectedTab, #showFormsButton {
+  color: #FFB300;
+  cursor: pointer
+}
+
+.theme_clear a, .theme_clear .coloredIcon, .theme_clear .unhideButton,
+  .theme_clear .embedButton, .theme_clear .checkedFavouriteButton:before,
+  .theme_clear #selectedTab, .theme_clear #showFormsButton {
+  color: #000
+}
+
+.coloredIcon::before {
+  font-family: 'Icons';
+}
+
+#navLinkSpan .coloredIcon:before, #navOptionsSpan .coloredIcon:before,
+  #links .coloredIcon:before {
+  margin-right: 0.25em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, .glowOnHover:hover {
+  text-shadow: 0px 0px 5px #117743;
+}
+
+u {
+  text-decoration: underline;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+input, select, textarea {
+  border: 1px double #07371F;
+  border-radius: 5px;
+  background: #282A2E;
+  color: #ACACAC;
+  font-family: 'Hack', monospace, sans-serif;
+  font-size: 80%;
+}
+
+.theme_clear input, .theme_clear select, .theme_clear textarea {
+  background: #dddddd;
+  color: #000;
+}
+
+input[type=button], input[type=submit], button, .dropzone, .selectedCell
+  {
+  border: 3px double #07371F;
+  border-radius: 5px;
+  background: #16171A;
+  color: #ACACAC;
+  padding-left: 0.25em;
+  font-family: 'Hack', monospace, sans-serif;
+  font-size: 80%;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.theme_clear input[type=button], .theme_clear input[type=submit],
+  .theme_clear button, .theme_clear .dropzone, .theme_clear .selectedCell
+  {
+  background: #a7a7a7;
+  color: #000;
+}
+
+.title, .unhideButton {
+  font-weight: bold;
+}
+
+.fileBrowser {
+  background: none;
+}
+
+/* import resources here; external CSS, fonts, etc */
+@font-face {
+  font-family: 'Hack';
+  src: url('hack-regular-webfont.eot?v=2.018');
+  src: url('hack-regular-webfont.eot?#iefix&v=2.018')
+    format('embedded-opentype'),
+    url('hack-regular-webfont.woff2?v=2.018') format('woff2'),
+    url('hack-regular-webfont.woff?v=2.018') format('woff'),
+    url('hack-regular-webfont.ttf?v=2.018') format('truetype'),
+    url('hack-regular-webfont.svg?v=2.018#hackregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Icons';
+  src: url('open-iconic.eot');
+  src: url('open-iconic.eot?#iconic-sm') format('embedded-opentype'),
+    url('open-iconic.woff') format('woff'), url('../open-iconic.ttf')
+    format('truetype'), url('open-iconic.otf') format('opentype'),
+    url('open-iconic.svg#iconic-sm') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* body styles, inherited by whole page */
+body {
+  color: #ACACAC;
+  background: #1D1F21;
+  font-family: 'Hack', monospace, sans-serif;
+  font-size: 100%;
+  margin: 0px;
+}
+
+body.theme_clear {
+  background-color: #cccccc;
+  color: #000
+}
+
+/* header and nav / top of page styles */
+header {
+  margin: 3em auto 0 auto;
+  text-align: center;
+}
+
+nav {
+  height: 18px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #151515;
+  border-bottom: 1px solid #B0790A;
+  padding-bottom: 3px;
+  font-size: 70%;
+  text-align: center;
+  z-index: 1;
+}
+
+.theme_clear nav {
+  background-color: #acacac
+}
+
+nav span, nav a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 0.2em;
+}
+
+#navLinkSpan {
+  float: left;
+}
+
+#navOptionsSpan {
+  float: right;
+}
+
+#navLinkHome:before {
+  content: "\e078";
+}
+
+#navBoardList:before {
+  content: "\e09b";
+}
+
+#linkOverboard:before, #navOverboard:before {
+  content: "\e007";
+}
+
+#settingsButton:before {
+  content: "\e041";
+}
+
+#navPosting:before {
+  content: "\e09a";
+}
+
+#navCatalog:before {
+  content: "\e072";
+}
+
+#linkRss:before {
+  content: "\e0b7";
+}
+
+#linkTop:before {
+  content: "\e012";
+}
+
+#linkBottom:before {
+  content: "\e00f";
+}
+
+#linkBack:before {
+  content: "\e003";
+}
+
+/* board list */
+#divPages {
+  display: inline-block;
+}
+
+#divPages a {
+  text-decoration: none;
+  padding: 0 0.25em;
+  display: inline-block;
+}
+
+a.rules:after {
+  font-family: Icons;
+  content: "\e052";
+  margin-right: 0.5em;
+  color: #117743;
+  height: 80%;
+  font-size: 80%;
+  padding-left: 0.25em;
+  vertical-align: middle;
+}
+
+/* markdown */
+.greenText {
+  color: #789922;
+}
+
+.redText {
+  color: #AF0A0F;
+  font-weight: bold;
+  font-size: 125%;
+}
+
+span.spoiler {
+  background: #000;
+  color: #000;
+  padding: 0 1px;
+}
+
+.spoiler:hover {
+  color: #ACACAC;
+  background: none;
+}
+
+.red {
+  color: #117743;
+}
+
+/* CSS for pages that deal with site and account settings and bans */
+#settingsWrapper {
+  text-align: center;
+  width: 80%;
+  margin: 2em auto;
+}
+
+#settingsFieldset {
+  padding: 1em;
+  display: inline-block;
+  text-align: left;
+}
+
+.banners {
+  margin: 1em;
+  width: auto;
+  padding: 0.5em;
+}
+
+#settingsFieldset textarea {
+  display: block;
+  height: 5em;
+}
+
+#settingsFieldset label {
+  display: block;
+}
+
+#settingsFieldset label input {
+  display: inline-block;
+}
+
+#settingsWrapper .captchaDiv input {
+  display: inline-block;
+}
+
+.subCaptchaDiv {
+  text-align: left;
+}
+
+.captchaTimer {
+  font-size: 80%;
+}
+
+.wide, #postingForm input[type='text'], .modalTableBody input[type='text'],
+  .modalTableBody select {
+  width: 100%;
+}
+
+#redirect, #maint {
+  text-align: center;
+}
+
+#labelCaptchaId {
+  color: #ff0000;
+}
+
+#staticPageWrapper {
+  margin: 2em auto;
+  text-align: center;
+}
+
+/* footer styles */
+footer {
+  width: 100%;
+  margin: 3em 0px 2em 0px;
+  text-align: center;
+  font-size: 75%;
+}
+
+.innerPost, .markedPost {
+  display: inline-block;
+  padding: 0.25em;
+  max-width: 100%;
+}
+
+/* this has to go down here to override anything above it */
+.hidden {
+  display: none;
+}
+
+#settingsWrapper input.hidden {
+  display: none;
+}
+
+.floatingMenu {
+  padding: 0.25em;
+}
+
+.floatingMenu .headerLabel {
+  font-size: 80%;
+}
+
+.floatingMenu .header, .floatingMenu .headerLabel {
+  cursor: pointer;
+}
+
+#divRemember input {
+  display: inline;
+}
+
+#ownedDiv a, #volunteeredDiv a {
+  display: block;
+}
+
+#navBoardList::after {
+  content: 'Home';
+}
+
+#navOverboard::after, #linkOverboard::after {
+  content: 'overboard';
+}
+
+#linkSfwOver::after {
+  content: 'overboard sfw';
+}
+
+#navPosting::after {
+  content: 'About';
+}
+
+#navLinkHome::after {
+  content: 'home';
+}
+
+#watcherButton::after {
+  content: 'watched threads';
+}
+
+#settingsButton::after {
+  content: 'settings';
+}
+
+#linkGlobalLogs::after {
+  content: 'logs';
+}
+
+#linkArchives::after {
+  content: 'archives';
+}
+
+#linkGraphs::after {
+  content: 'daily graphs';
+}
+
+#linkGlobalRules::after {
+  content: 'global rules';
+}
+
+#linkLinks::after {
+  content: 'links';
+}
+
+#linkAbout::after {
+  content: 'about';
+}
+
+#navOptionsSpan a{
+  margin-top: 2px;
+}
+
+#linkContact::after {
+  content: 'contact';
+}
+
+#linkAccount::after {
+  content: 'account';
+}
+
+@media only screen and (max-width: 812px) {
+  #navLinkSpan span, #navOptionsSpan span, legend, #settingsButton, #links span,
+    .hideMobile {
+    display: none;
+  }
+  #navLinkSpan a::after, #navOptionsSpan a::after, #links a::after {
+    content: '';
+  }
+  nav {
+    font-size: 115%;
+    height: auto;
+    padding: 2px 2px;
+  }
+  #themeSelector {
+    max-width: 100px;
+  }
+  .logoImg {
+    margin-top: 10px;
+    height: 75px;
+  }
+  input, select, textarea {
+    font-size: 100%;
+  }
+  body {
+    font-size: 85%;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .captchaImage {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+  }
+}
+
+
+
+
+/*balk*/
+#navPosting:before{content:"\e0b0";}
+body{color:#333;background:#eef8f0;font-family:sans-serif;}
+.innerPost{border-style:none;background:#d6f0da;color:#333;/* border-width:0 2px 2px 0;border-color:#ccc;border-style:none solid solid none;border:none;border-radius:0;*/}
+a{color:#06f;text-decoration:none;}
+header{color:#663e11;margin-top:2em;}
+/*.innerPost.markedPost{background:#bbe6c2;}
+*/hr{border-color:#ccc;}
+nav{background-color:#d6f0da;color:#333;border-bottom:1px solid #ccc;}
+a,
+.coloredIcon,
+.hideButton{color:#000;}
+/* font-weight:bold;}
+.title{color:#333;}
+*/input,
+select,
+textarea{color:#333;background:#fff;font-family:sans-serif;border-radius:0;border:1px solid #999;}
+#newPostFieldset,
+#quick-reply table,
+.modalDecorationPanel,
+.floatingMenu,
+#settingsFieldset{background:#eef8f0;color:#333;}
+input[type="submit"],
+input[type="button"],
+button{border:1px solid #999;border-radius:0;background:#d6f0da;color:#000;padding:6px;}
+.embedButton{color:#069;}
+.quoteLink{color:#c00;}
+#divLatestImages img,
+.topBoards a,
+#divLatestPosts .latestPostCell{border:none;background:#d6f0da;box-shadow:0 0 10px #ccc;}
+.sideCatalogCell,
+.catalogCell{background:#d6f0da;border:1px solid #ccc;border-radius:0;}
+.sideCatalogMarkedCell{background:#eef8f0;border:1px solid #ccc;border-radius:0;}
+#postingForm input[type="text"]{width:99%;}
+.small{font-weight:normal;}
+#formMore{font-weight:bold;}
+#quick-reply select{width:78%;}
+#quick-reply textarea{min-height:120px;}
+#quick-reply th{border:0;}
+#links span{display:none;}
+.selectedCell{border:1px solid #ccc;background:#eef8f0;color:#666;}
+.logoImg{height:auto;/* box-shadow:0 0 10px grey;*/}
+.quoteTooltip{box-shadow:-2px 2px 4px lightblue;background:#d6f0da;}
+/*#bannerImage{box-shadow:0 0 10px #aaa;}
+*/#watchedMenu{min-width:150px;min-height:100px;text-align:center;}
+#divThreads{margin-bottom:40px;}
+a:hover,
+.glowOnHover:hover{color:#090;text-shadow:none;}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover{background:#eef8f0;}
+input[type="submit"]:active,
+input[type="button"]:active,
+button:active{background:#d6f0da;}
+#sideCatalogBody img{max-width:100px;max-height:100px;}
+#divLatestPosts .latestPostCell{max-width:190px;}
+#selectedTab{color:#090;}
+.unhideButton{color:#666;}
+body{color:#ccc;background:#1d1f21;font-family:sans-serif;}
+.markedPost,.innerPost{border-radius:0;color:#ccc;background:#282a2e;/* border-width:0 1px 1px 0;border-color:#141517;border-style:none solid solid none;border:none;*/}
+header{color:#900;}
+/*.innerPost.markedPost{background:#404040;}
+*/hr{border-color:#404040;}
+nav{background-color:#333;color:#eee;border-bottom:1px solid #404040;}
+a,
+.coloredIcon,
+.hideButton,
+.linkSelf,
+.linkQuote{color:#81a2be;text-decoration:none;/* font-weight:bold;*/}
+.title{color:#ccc;}
+/*input,
+select,
+textarea{background:#ccc;}
+ color:#333;font-family:sans-serif;font-size:16px;border-radius:0;border:1px solid #999;}
+*/.modalDecorationPanel,
+.floatingMenu,
+#newPostFieldset,
+#quick-reply table,
+#settingsFieldset{background:#222;border:1px dashed #333;color:#ccc;}
+input[type="submit"],
+input[type="button"],
+button{border:1px solid #666;border-radius:0;background:#333;color:#ccc;padding:6px;}
+.innerOP{color:#ccc;}
+.innerPost{border-style:none solid solid none;border-color:#222;color:#ccc;}
+.embedButton{color:#999;}
+.topBoards a,
+#divLatestImages img,
+#divLatestPosts .latestPostCell{border:none;background:#282a2e;box-shadow:0 0 10px black;}
+.sideCatalogCell,
+.catalogCell{background:#282a2e;border:1px solid #333;border-radius:0;}
+.markedPost,
+.sideCatalogMarkedCell{background:#333;border:1px solid #404040;border-radius:0;}
+#postingForm input[type="text"]{width:99%;}
+.small{font-weight:normal;}
+#formMore{font-weight:bold;}
+#quick-reply select{width:78%;}
+#quick-reply textarea{min-height:120px;}
+#quick-reply th{border:0;}
+/* .reportFieldset,
+#qremail,
+#qrsubject,
+#links span{display:none;}
+*/.selectedCell{border:1px solid #69f;background:#ddd;color:#666;}
+.reportFieldset{border:1px dashed #666;}
+.logoImg{height:auto;/* box-shadow:0 0 10px sienna;*/}
+.quoteTooltip{box-shadow:-2px 2px 4px #111;background:#282a2e;}
+#watchedMenu{min-width:150px;min-height:100px;text-align:center;}
+#divThreads{margin-bottom:40px;}
+a:hover,
+.panelBacklinks a:hover,
+.glowOnHover:hover{color:#ccc;/* text-shadow:none;*/}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover{background:#333;color:#fff;}
+input[type="submit"]:active,
+input[type="button"]:active,
+button:active{background:#333;}
+#sideCatalogBody img{max-width:100px;max-height:100px;}
+#divLatestPosts .latestPostCell{max-width:190px;}
+#selectedTab{color:#fff;}
+.spoiler:hover{cursor:none;}
+/* background:#999;}
+.spoiler a{color:#000;}
+*/body.theme_clear{color:#333;/* background-color:#999;*/ font-family:sans-serif;}
+.theme_clear nav{border-bottom:1px solid #aaa;background-color:#dedede;}
+.theme_clear .innerOP{color:#333;}
+.theme_clear .innerPost{/* border:none;border-width:0 2px 2px 0;background-color:#ccc;*/ border-radius:0;color:#333;border-color:#bbb;border-style:none solid solid none;}
+.theme_clear .embedButton{text-shadow:none;color:#666;}
+.theme_clear .title{color:#333;}
+.theme_clear .coloredIcon,
+.theme_clear a{color:#333;}
+.theme_clear input,
+.theme_clear select,
+.theme_clear textarea{background:#eee;}
+.theme_clear .modalDecorationPanel,
+.theme_clear .floatingMenu,
+.theme_clear #newPostFieldset,
+.theme_clear #quick-reply table,
+.theme_clear #settingsFieldset{background:#ccc;border:1px dashed #666;color:#333;}
+.theme_clear #newPostFieldset th,
+.theme_clear .modalDecorationPanel th{color:#333;}
+.theme_clear .markedPost,
+.theme_clear .sideCatalogMarkedCell{background:#eee;border:1px solid #bbb;border-radius:0;}
+.theme_clear input[type="submit"],
+.theme_clear input[type="button"],
+.theme_clear button{border:1px solid #999;border-radius:0;background:#ddd;color:#333;padding:6px;}
+.theme_clear .topBoards a,
+.theme_clear #divLatestImages img,
+.theme_clear #divLatestPosts .latestPostCell{border:none;background:#ddd;box-shadow:0 0 10px #999;}
+.theme_clear .sideCatalogCell,
+.theme_clear .catalogCell{background:#dedede;border:1px solid #bbb;border-radius:0;}
+.theme_clear #postingForm input[type="text"]{width:99%;}
+.theme_clear hr{border-color:#666;}
+.theme_clear .small{font-weight:normal;}
+/*.theme_clear #qremail,
+.theme_clear #links span,
+.theme_clear #qrsubject{display:none;}
+*/.theme_clear .selectedCell{border:1px solid #ccc;background:#ddd;color:#666;}
+.theme_clear .reportFieldset{border:1px dashed #666;}
+.logoImg{height:auto;}
+.theme_clear .logoImg{height:auto;/* box-shadow:0 0 10px #666;*/}
+.theme_clear #quick-reply,
+.theme_clear .floatingMenu{box-shadow:0 0 20px #666;}
+.theme_clear #watchedMenu{min-width:150px;min-height:100px;text-align:center;}
+.theme_clear #divThreads{margin-bottom:40px;}
+.theme_clear a:hover,
+.theme_clear .glowOnHover:hover{color:#000;text-shadow:none;}
+.theme_clear input[type="submit"]:hover,
+.theme_clear input[type="submit"]:active,
+.theme_clear input[type="button"]:hover,
+.theme_clear input[type="button"]:active,
+.theme_clear button:hover,
+.theme_clear button:active{background:#eee;}
+.theme_clear .greenText{color:green;}
+/*.theme_clear .innerOP .divMessage{color:white;text-shadow:0 0 4px navy;}
+*/.theme_clear .redText,
+.theme_clear .innerOP .divMessage a{text-shadow:none;}
+.theme_clear .linkName.noEmailName:hover{color:#000;text-shadow:none;}
+.theme_blue .coloredIcon:hover,
+.theme_blue .hideButton:hover,
+.theme_blue .glowOnHover:hover{color:#333;text-shadow:none;}
+body.theme_blue{color:#333;background:#eef2ff url('fade-blue.png') repeat-x;font-family:sans-serif;}
+.theme_blue .innerOP{color:#333;}
+.theme_blue .innerPost{background:#d6daf0;color:#333;border-color:#ccc;border-style:none solid solid none;/* border-width:0 2px 2px 0;border:none;border-radius:6px;*/}
+.theme_blue hr{border-color:#ccc;}
+.theme_blue nav{background-color:#eef2ff;color:#666;border-bottom:1px solid #ccc;}
+.theme_blue a{color:#333;}
+.theme_blue a:hover{color:#000;}
+.theme_blue .coloredIcon,
+.theme_blue .hideButton,
+.theme_blue .linkSelf,
+.theme_blue .linkQuote{color:#000;text-decoration:none;/* font-weight:bold;*/}
+.theme_blue .title{color:#333;}
+/*.theme_blue input,
+.theme_blue select,
+.theme_blue textarea{color:#333;background:#fff;font-family:sans-serif;font-size:16px;border-radius:0;border:1px solid #ccc;}
+*/.theme_blue .modalDecorationPanel,
+.theme_blue .floatingMenu,
+.theme_blue #newPostFieldset,
+.theme_blue #quick-reply table,
+.theme_blue #settingsFieldset{background:#eef2ff;border:1px dashed #ccc;color:#333;}
+.theme_blue input[type="submit"],
+.theme_blue input[type="button"],
+.theme_blue button{border:1px solid #999;border-radius:0;background:#d6daf0;color:#333;padding:6px;}
+.theme_blue .embedButton{color:#666;}
+.theme_blue .topBoards a,
+.theme_blue #divLatestImages img,
+.theme_blue #divLatestPosts .latestPostCell{border:none;background:#d6daf0;box-shadow:0 0 8px #aaa;}
+.theme_blue .sideCatalogCell,
+.theme_blue .catalogCell{background:#d6daf0;border:1px solid #ccc;border-radius:0;}
+.theme_blue .markedPost,
+.theme_blue .sideCatalogMarkedCell{background:#eef2ff;border:1px solid #ccc;border-radius:0;}
+.theme_blue #postingForm input[type="text"]{width:99%;}
+.theme_blue .small{font-weight:normal;}
+.theme_blue #formMore{font-weight:bold;}
+/*.theme_blue #qremail,
+.theme_blue #qrsubject,
+.theme_blue #links span{display:none;}
+*/.theme_blue .selectedCell{border:1px solid #ccc;background:#fff;color:#333;}
+.theme_blue .reportFieldset{border:1px dashed #ccc;}
+.theme_blue .logoImg{height:auto;/* box-shadow:0 0 10px gray;*/}
+.theme_blue .quoteTooltip{box-shadow:0 0 4px #999;background:#d6daf0;}
+.theme_blue #quick-reply,
+.theme_blue .floatingMenu{box-shadow:0 0 10px #ccc;}
+.theme_blue #watchedMenu{min-width:150px;min-height:100px;text-align:center;}
+.theme_blue #divThreads{margin-bottom:40px;}
+.theme_blue input[type="submit"]:hover,
+.theme_blue input[type="button"]:hover,
+.theme_blue button:hover{background:#eef2ff;}
+.theme_blue input[type="submit"]:active,
+.theme_blue input[type="button"]:active,
+.theme_blue button:active{background:#fff;}
+.theme_blue #selectedTab{color:#69f;}
+
+
+
+.theme_red .modalDecorationPanel,
+.theme_red .floatingMenu,
+.theme_red #newPostFieldset,
+.theme_red #quick-reply table,
+.theme_red #settingsFieldset {
+	background: unset;
+}
+
+.theme_red .title,
+.theme_red .modalDecorationPanel,
+.theme_red .floatingMenu,
+.theme_red .innerPost,
+.theme_red .quoteLink,
+.theme_red .panelBacklinks a,
+.theme_red #newPostFieldset,
+.theme_red #quick-reply table,
+.theme_red #settingsFieldset,
+.theme_red #linkMod,
+.theme_red #linkModeration,
+.theme_red #linkManagement {
+	color: unset;
+}
+
+.theme_red body, body.theme_red {
+	background: #ffe url(fade.png) repeat-x;
+	color: maroon;
+}
+
+.theme_red .markedPost,
+.theme_red .sideCatalogMarkedCell {
+	background: #ffe;
+	border-color: #ccc;
+	box-shadow: none;
+}
+
+.theme_red .sideCatalogCell,
+.theme_red .innerPost {
+/*	box-shadow: 0px 1px 1px 0px #ccc;
+*/	background: #f0e0d6;
+	border-style: none solid solid none;
+	border-color: #ccc;
+}
+
+.theme_red a,
+.theme_red .coloredIcon,
+.theme_red .unhideButton,
+.theme_red .embedButton,
+.theme_red .checkedFavouriteButton::before,
+.theme_red #selectedTab,
+.theme_red #showFormsButton {
+	color: #900;
+}
+
+.theme_red .modalTableBody th,
+.theme_red textarea,
+.theme_red input,
+.theme_red nav {
+	background: #ffe;
+	color: #333;
+}
+
+.theme_red .floatingMenu,
+.theme_red #quick-reply table {
+	background: #f0e0d6;
+}
+
+.theme_red input[type="button"],
+.theme_red input[type="submit"],
+.theme_red button,
+.theme_red .dropzone,
+.theme_red .selectedCell {
+	border: 1px solid gray;
+	background: #f7eee9;
+	color: #333;
+}
+
+.theme_red #selectedTab {
+	text-shadow: none;
+}
+
+.theme_red select {
+	background: #ffe;
+	color: #333;
+}
+
+.theme_red .catalogCell {
+	background: none;
+	border-radius: unset;
+}
+
+.theme_red textarea,
+.theme_red select,
+.theme_red input {
+	border-radius: 0;
+	border: 1px solid #999;
+}
+/*
+.theme_red #navLinkSpan {
+	margin-top: 1px;
+}
+
+.theme_red .markedPost,
+.theme_red .sideCatalogMarkedCell {
+	background: #ffe;
+	box-shadow: 1px 1px 2px 1px #ccc;
+}
+*/
+.theme_red a:hover {
+	color: #c00;
+}
+/*
+.theme_red header {
+	margin: 2em auto 0 auto;
+}
+*/
+.theme_red .title,
+.theme_red .innerOP,
+.theme_red .innerPost {
+	color: maroon;
+}
+
+.theme_red .quoteTooltip {
+	box-shadow: none;
+}
+
+.theme_red nav {
+	border-bottom: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 700px) {
+	#themeSelector{
+		display: none;
+	}
+}
+
+.closedReportCell {
+	margin-top: 1em;
+}
+
+/* BEGIN MIKU */
+
+body.theme_miku {
+    background: #D2FFEE no-repeat;
+    background-image: none;
+    color: #000;
+    background-image: linear-gradient(to bottom, #a1e8ec 0, transparent 260px);
+}
+
+.theme_miku a,
+.theme_miku .coloredIcon,
+.theme_miku .unhideButton,
+.theme_miku .embedButton,
+.theme_miku .checkedFavouriteButton::before,
+.theme_miku #selectedTab,
+.theme_miku .labelOmission,
+.theme_miku #formMore,
+.theme_miku #qrFormMore,
+.theme_miku .removeButton {
+    color: #00637B !important;
+}
+
+.theme_miku a:hover,
+.theme_miku .glowOnHover:hover,
+.theme_miku #formMore:hover,
+.theme_miku #qrFormMore:hover,
+.theme_miku .floatingMenu.extraMenu div:hover,
+.theme_miku .floatingMenu.hideMenu div:hover,
+.theme_miku .removeButton:hover {
+    color: #d00 !important;
+    filter: none;
+}
+
+.theme_miku #settingsFieldset,
+.theme_miku .reportFieldset,
+.theme_miku .titleFieldset,
+.theme_miku input,
+.theme_miku select,
+.theme_miku textarea,
+.theme_miku .contentAction,
+.theme_miku #divBoards .boardsCell:nth-child(1n) {
+    background: #fff;
+}
+
+.theme_miku input,
+.theme_miku select,
+.theme_miku textarea {
+    color: #000;
+}
+
+.theme_miku #settingsFieldset,
+.theme_miku .reportFieldset,
+.theme_miku .titleFieldset {
+    border: 1px solid rgb(0, 147, 171);
+}
+
+.theme_miku fieldset legend,
+.theme_miku #divBoardsLegend,
+.theme_miku #divArchiveLegend {
+    background: #c9f8f0;
+    color: #000;
+}
+
+.theme_miku nav,
+.theme_miku .dropdown-content {
+    background: rgb(182, 221, 222);
+}
+
+.theme_miku nav {
+    border-bottom: 1px solid rgb(0, 147, 171);
+}
+
+.theme_miku .dropdown-content {
+    border: 1px solid #89A;
+}
+
+.theme_miku #dynamicHeader a:hover,
+.theme_miku #dynamicHeaderAlt a:hover,
+.theme_miku #dynamicHeaderThread a:hover,
+.theme_miku #dynamicHeaderOverboard a:hover,
+.theme_miku .glowOnHover:hover,
+.theme_miku .floatingMenu.extraMenu div:hover,
+.theme_miku .floatingMenu.hideMenu div:hover,
+.theme_miku .settingsTab:hover {
+    color: #d00 !important;
+}
+
+.theme_miku .topBoards a {
+    background: none;
+}
+
+.theme_miku #divBoards .boardsCell:nth-child(2n) {
+    background-color: #B6DDDE;
+}
+
+.theme_miku input[type="button"],
+.theme_miku input[type="submit"],
+.theme_miku button,
+.theme_miku .dropzone,
+.theme_miku selectedCell,
+.theme_miku #contentBoxInner button,
+.theme_miku #contentBoxInner .hidden.reloadCaptchaButton,
+.theme_miku #contentBoxInner input[type="submit"] {
+    border: 1px solid rgb(0, 147, 171);
+    background: #c9f8f0;
+    color: #000;
+}
+
+.theme_miku input,
+.theme_miku select,
+.theme_miku textarea,
+.theme_miku #quick-reply input:focus,
+.theme_miku #quick-reply textarea:focus {
+    border: 1px solid #aaa;
+}
+
+.theme_miku #quick-reply input:focus,
+.theme_miku #quick-reply textarea:focus,
+.theme_miku input:focus,
+.theme_miku #fieldMessage:focus,
+.theme_miku textarea:focus {
+    border: 1px solid #000;
+}
+
+.theme_miku .floatingMenu,
+.theme_miku #quick-reply table,
+.theme_miku .modalDecorationPanel,
+.theme_miku #divArchive div:nth-child(2n),
+.theme_miku .innerPost,
+.theme_miku .sideCatalogCell {
+    background: #B6DDDE;
+}
+
+.theme_miku .markedPost,
+.theme_miku .sideCatalogMarkedCell {
+    background: #a9d8ff;
+    border: 1px solid rgb(0, 147, 171);
+}
+
+.theme_miku #existingFiltersPanel > div:nth-child(2n),
+.theme_miku #watchedMenu > div:nth-child(2n),
+.theme_miku .settingsTab {
+    background: rgba(255,255,255,.40);
+}
+
+.theme_miku #postingForm th,
+.theme_miku .modalTableBody th,
+.theme_miku .postingTypeBanner,
+.theme_miku #quick-reply th,
+.theme_miku #newPostFieldset legend,
+.theme_miku #selectedTab{
+    background: #c9f8f0;
+    border: 1px solid rgb(0, 147, 171);
+}
+
+.theme_miku .innerPost,
+.theme_miku .reportFieldset,
+.theme_miku .sideCatalogCell {
+    border: 1px solid #8FCCCD;
+}
+
+.theme_miku .noEmailName,
+.theme_miku .noEmailName:hover {
+    color: #117743 !important;
+}
+
+.theme_miku .labelSubject {
+    color: #117743;
+}
+
+.theme_miku #questionBox::before,
+.theme_miku #questionBox::after,
+.theme_miku #showFederatedButton::before,
+.theme_miku #showFederatedButton::after,
+.theme_miku .returnReplyLink::before,
+.theme_miku .returnReplyLink::after,
+.theme_miku #showFormsButton::before,
+.theme_miku #showFormsButton::after,
+.theme_miku #threadOpen::before,
+.theme_miku #threadOpen::after,
+.theme_miku .opHead .coloredIcon,
+.theme_miku .postInfo .coloredIcon {
+    color: #00637B !important;
+}
+
+.theme_miku #sideCatalogDiv a,
+.theme_miku #labelDescription,
+.theme_miku .linkSelf,
+.theme_miku .linkQuote,
+.theme_miku .labelStats,
+.theme_miku .spoiler:hover,
+.theme_miku .indicatorSfw::after,
+.theme_miku .indicatorInactive::after,
+.theme_miku #formMore td::before,
+.theme_miku #qrFormMore td::before,
+.theme_miku #formMore td::after,
+.theme_miku #qrFormMore td::after,
+.theme_miku #showFormsButton::before,
+.theme_miku #showFormsButton::after,
+.theme_miku #dynamicHeader a,
+.theme_miku #dynamicHeaderAlt a,
+.theme_miku #dynamicHeaderThread a,
+.theme_miku #dynamicHeaderOverboard a{
+    color: #34345C !important;
+}
+
+.theme_miku #quick-reply table,
+.theme_miku .modalDecorationPanel,
+.theme_miku .floatingMenu,
+.theme_miku #settingsFieldset,
+.theme_miku .reportFieldset,
+.theme_miku #newPostFieldset legend,
+.theme_miku .settingsTab,
+.theme_miku fieldset legend,
+.theme_miku #divBoardsLegend,
+.theme_miku #divArchiveLegend {
+    border: 1px solid rgb(0, 147, 171) !important;
+}
+
+.theme_miku hr,
+.theme_miku #innerUtilityTop,
+.theme_miku #innerUtilityBottom.catalogBottom {
+    border-top: 1px solid rgb(0, 147, 171);
+}
+
+.theme_miku #dynamicAnnouncement {
+    border-top: 1px solid rgb(0, 147, 171);
+    border-bottom: 1px solid rgb(0, 147, 171);
+}
+
+.theme_miku #innerUtilityBottom,
+.theme_miku #innerUtilityTop.catalogTop {
+    border-bottom: 1px solid #728E7E;
+}
+
+.theme_miku .quoteTooltip {
+    border: none;
+}
+
+.theme_miku .floatingMenu,
+.theme_miku #quick-reply table,
+.theme_miku .modalDecorationPanel {
+    color: #000;
+}
+
+.theme_miku .dropzone,
+.theme_miku .selectedCell {
+    border: 1px solid rgb(0, 147, 171) !important;
+    background: #c9f8f0;
+    color: #000;
+}
+
+.theme_miku .greenText {
+    color: #789922;
+}
+/* END MIKU */
+
+
+
+
+
+
+
+
