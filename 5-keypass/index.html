@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Generator</title>
+  <style>
+  body {
+    background-color: #705FBA;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #password {
+    background-color: #A9BA5F;
+    width: 400px;
+    height: 100px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-top: 10px;
+    outline: none;
+    overflow: auto;
+    resize: both;
+  }
+  
+  #file {
+    display: inline-block;
+    width: 120px;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+<br><br>
+  <div>
+    <input type="text" id="file" name="file" placeholder="Save to file">
+    <button onclick="saveToFile()">Save</button>
+  </div>
+  <div id="output">
+    <div id="password" contenteditable="true"></div>
+  </div>
+  <div>
+    <select id="length">
+      <option value="128">128 bits (16 bytes)</option>
+      <option value="192">192 bits (24 bytes)</option>
+      <option value="256">256 bits (32 bytes)</option>
+      <option value="512">512 bits (64 bytes)</option>
+      <option value="5000">5000 bits (625 bytes)</option>
+      <option value="20000">20000 bits (2500 bytes)</option>
+      <option value="40000">40000 bits (5000 bytes)</option>
+      <option value="800000">100000 bytes (800000 bits)</option>
+    </select>
+    <button onclick="generate()">Generate Password</button>
+  </div>
+  <script>
+    function generate() {
+      const length = document.getElementById('length').value;
+      const password = generatePassword(length);
+      document.getElementById('password').textContent = password;
+    }
+
+    function generatePassword(length) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
+      let password = '';
+      for (let i = 0; i < length/8; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return password;
+    }
+
+    function saveToFile() {
+      const password = document.getElementById('password').textContent;
+      const filename = document.getElementById('file').value;
+      const blob = new Blob([password], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename || 'password.txt';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+    
+    // Disable manual input in the length input field
+    document.getElementById("length").addEventListener("keydown", function(e) {
+      e.preventDefault();
+    });
+  </script>
+</body>
+</html>
